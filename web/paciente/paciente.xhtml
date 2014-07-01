@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../templates/templateN-S.xhtml">
+
+            <ui:define name="metadata">
+                metadata
+            </ui:define>
+
+            <ui:define name="head">
+                <title><h:outputText value="#{bundlePac.encabezado1}" /></title>
+            </ui:define>
+
+            <ui:define name="top">
+                <h1><h:outputText value="#{bundlePac.encabezado1}" /></h1>
+                <div id="zonaUser" style="align:left;">#{miSesionMB.usuario.usuario}</div>
+                <div>
+                    <h:form>
+                        <br/><h:commandLink action="/ambulantes/citas" value="Citas de ambulantes" />
+                        <br/><h:commandLink action="citas" value="Citas de ambulantes (navigation rules)" />
+                        <br/><h:commandLink action="/upload/fileUpload" value="Upload de ficheros" />
+                        <br/><h:commandLink action="/hospitalizacion/lista-hospitalizados" value="Hospitalización" />
+                    </h:form>
+                </div>
+                
+                <div id="listaUploads">
+                    <h3>Últimos uploads</h3>
+                    <h:dataTable var="auxRuta" value="#{miSesionMB.ultimosUploads.listaFichs}" >
+                        <h:column>
+                            <f:facet name="header" >Ruta</f:facet>
+                            #{auxRuta.ruta}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header" >Nombre fichero</f:facet>
+                            #{auxRuta.nombreFichero}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header" >Nombre paciente</f:facet>
+                            #{auxRuta.nombrePaciente}
+                        </h:column>
+                    </h:dataTable>
+                </div>
+                
+                <div id="listaApuntes">
+                    <h3>Últimos apuntes</h3>
+                </div>
+            </ui:define>
+
+            <ui:define name="content">
+                content
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

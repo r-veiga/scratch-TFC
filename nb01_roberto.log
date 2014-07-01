@@ -1,0 +1,4 @@
+2014-06-30 19:27:35,DEBUG,jsf.managed.beans.ListaHospitalizadosMB,ListaHospitalizadosMB.java,81,j.m.b.ListaHospitalizadosMB,cargarTabla How are you today?
+2014-06-30 19:27:35,INFO,jsf.managed.beans.ListaHospitalizadosMB,ListaHospitalizadosMB.java,82,j.m.b.ListaHospitalizadosMB,cargarTabla I am fine.
+2014-06-30 19:27:35,WARN,jsf.managed.beans.ListaHospitalizadosMB,ListaHospitalizadosMB.java,83,j.m.b.ListaHospitalizadosMB,cargarTabla I love programming.
+2014-06-30 19:27:35,ERROR,jsf.managed.beans.ListaHospitalizadosMB,ListaHospitalizadosMB.java,84,j.m.b.ListaHospitalizadosMB,cargarTabla I am programming.

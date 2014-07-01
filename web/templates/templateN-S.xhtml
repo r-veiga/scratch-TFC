@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:insert name="metadata" />
+    <f:view locale="#{miSesionMB.lenguaje}">
+        <h:head> 
+            <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15" />
+            <h:outputStylesheet name="./css/default.css"/>
+            <h:outputStylesheet name="./css/cssLayout.css"/>
+
+            <h:outputStylesheet library="estilo" name="rob_estilo_01.css" />
+
+            <ui:insert name="head">
+                <title>Plantilla templateN-S</title>
+            </ui:insert>
+        </h:head>
+
+        <h:body>
+            <h:outputScript library="js" name="calendario-locales.js" />
+            
+            <div id="norte" class="top">
+                <ui:insert name="top">Cabecera</ui:insert>
+            </div>
+
+            <div id="sur" class="center_content">
+                <ui:insert name="content">Cuerpo</ui:insert>
+            </div>
+
+        </h:body>
+    </f:view>
+</html>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../templates/templateN-S.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+
+    <ui:define name="metadata" >
+        <f:event type="preRenderView" listener="#{listaHospitalizadosMB.cargarTabla}" />    
+    </ui:define>
+
+    <ui:define name="head">
+        <title><h:outputText value="#{bundleHosp.encabezado1}" /></title>
+    </ui:define>
+
+    <ui:define name="top">
+        <h1><h:outputText value="#{bundleHosp.encabezado1}" /></h1>
+        <div id="zonaUser" style="align:left;">#{miSesionMB.usuario.usuario}</div>
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form id="formulario">
+            <h:outputText value="#{bundleHosp.historiaclinica}" />
+            <h:inputText id="hclinica" value="#{listaHospitalizadosMB.historiaClinica}"/>
+            <h:commandButton value="Consultar hª clínica" action="#{listaHospitalizadosMB.navegar}" />
+            <div>
+                <p:dataTable id="singleDataTable" var="paciente" value="#{listaHospitalizadosMB.listaHospitalizados}" 
+                             selectionMode="single" selection="#{listaHospitalizadosMB.hospitalizadoSeleccionado}" rowKey="#{paciente.codPaciente}">
+                    <f:facet name="header">
+                        Single with Row Click
+                    </f:facet>
+                    <p:ajax event="rowSelect" listener="#{listaHospitalizadosMB.onRowSelect}" update=":formulario:hclinica" />
+                    <p:column headerText="Hª clínica">
+                        <h:outputText value="#{paciente.codPaciente}" />
+                    </p:column>
+                    <p:column headerText="Paciente">
+                        <h:outputText value="#{paciente.nombre}" />
+                    </p:column>
+                    <p:column headerText="Localización">
+                        <h:outputText value="#{paciente.localizacion}" />
+                    </p:column>
+                    <f:facet name="footer">
+                        Esto es el pie de la tabla.
+                    </f:facet>
+                </p:dataTable>
+            </div>
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>
