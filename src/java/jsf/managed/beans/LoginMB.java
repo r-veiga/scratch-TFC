@@ -59,7 +59,7 @@ public class LoginMB {
         if (auxUsuario != null & auxUsuario.getPassword().equals(this.getPassword())) {
             sesionMB.setUsuario(auxUsuario);
             sesionMB.setUserLoggedIn(true);
-            outcome = "hospitalizacion/lista-hospitalizados";
+            outcome = "inicio";
         }
 
         return outcome;

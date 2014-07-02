@@ -21,7 +21,7 @@
 
         <h:body>
             <h:outputScript library="js" name="calendario-locales.js" />
-            
+
             <div id="norte" class="top">
                 <ui:insert name="top">Cabecera</ui:insert>
             </div>
@@ -30,6 +30,9 @@
                 <ui:insert name="content">Cuerpo</ui:insert>
             </div>
 
+            <h:form id="vueltaInicio" >
+                <h:commandLink action="/login" value="Vuelta a la pantalla de login" />
+            </h:form>
         </h:body>
     </f:view>
 </html>

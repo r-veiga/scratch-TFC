@@ -26,9 +26,9 @@
                 <h:form>
                     <h:panelGrid columns="2">
                         <h:outputText value="#{bundleComun.usuario}" />
-                        <h:inputText value="#{loginMB.usuario}" />
+                        <h:inputText value="#{loginMB.usuario}" required="true" requiredMessage="#{bundleComun.userObligatorio}" />
                         <h:outputText value="#{bundleComun.password}" />
-                        <h:inputText value="#{loginMB.password}" />
+                        <h:inputText value="#{loginMB.password}" required="true" requiredMessage="#{bundleComun.passwordObligatorio}" />
                         <h:outputText value="#{bundleComun.lenguaje}" />
                         <h:selectOneMenu value="#{miSesionMB.lenguaje}">
                             <f:selectItem itemLabel="#{bundleComun.spanish}" itemValue="es" />
