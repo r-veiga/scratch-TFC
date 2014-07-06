@@ -15,7 +15,8 @@ import org.primefaces.context.RequestContext;
 import org.primefaces.event.SelectEvent;
 
 /**
- *
+ * JSF Managed Bean @ViewScoped (ámbito vista). 
+ * Este Managed Bean se emplea exclusivamente por la página /ambulantes/citas.xhtml
  * @author Roberto
  */
 @Named(value = "citasMB")
