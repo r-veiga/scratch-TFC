@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>citas</from-outcome>
+            <to-view-id>/ambulantes/citas.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <application>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>es</supported-locale>
+            <supported-locale>es_ES</supported-locale>
+            <supported-locale>en_US</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>jsf.resource.bundles.comunes</base-name>
+            <var>bundleComun</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>jsf.resource.bundles.hospitalizacion</base-name>
+            <var>bundleHosp</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>jsf.resource.bundles.citas</base-name>
+            <var>bundleCitas</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>jsf.resource.bundles.paciente</base-name>
+            <var>bundlePac</var>
+        </resource-bundle>
+    </application>  
+
+</faces-config>

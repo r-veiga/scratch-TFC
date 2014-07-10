@@ -5,8 +5,14 @@
  */
 package jsf.managed.beans;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import javax.faces.application.NavigationHandler;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ComponentSystemEvent;
 import javax.inject.Named;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
@@ -26,9 +32,12 @@ public class LoginMB {
     private String usuario;
     private String password;
     private Map<String, User> mapaUsuarios;
-    
+
     @Inject
     private MiSesionMB sesionMB;
+
+    @ManagedProperty(value = "#{facesContext}")
+    private FacesContext contextoFaces;
 
     /**
      * Creates a new instance of LoginMB
@@ -65,6 +74,38 @@ public class LoginMB {
         return outcome;
     }
 
+    /**
+     * Procesos previos a la renderización de la vista .xhtml Permite una
+     * renavegación antes de la renderización si el usuario ya estuviese dado de
+     * alta: obvia la pantalla de login y encamina directamente a la pantalla de
+     * inicio de la aplicación
+     *
+     * @param cse
+     */
+    public void preCargarPagina() {
+        // Dirección (url) de la vista que ha invocado a este MBean
+//        String idVistaJSF = contextoFaces.getViewRoot().getViewId();
+        try {
+            if (sesionMB.isUserLoggedIn() == true) {
+                FacesContext facesContext = FacesContext.getCurrentInstance();
+                NavigationHandler navigationHandler = facesContext.getApplication().getNavigationHandler();
+                navigationHandler.handleNavigation(facesContext, null, "/inicio");
+            }
+//                ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+//                ec.redirect("/inicio?faces-redirect=true");
+//            }
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        this.cargarUsuarios();
+    }
+
+    /**
+     * Este método es de conveniencia. --- --- Debe cargar los VO Usuarios antes
+     * de la renderización de la vista. Los datos introducidos en el login se
+     * validarán contra los VO Usuarios aquí cargados.
+     */
     public void cargarUsuarios() {
         mapaUsuarios = new HashMap<>();
         mapaUsuarios.put("doctor1", new User("doctor1", "doctor"));

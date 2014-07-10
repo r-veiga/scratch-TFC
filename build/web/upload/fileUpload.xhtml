@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../templates/templateN-S.xhtml">
+
+            <ui:define name="metadata">
+                metadata
+            </ui:define>
+
+            <ui:define name="head">
+                head
+            </ui:define>
+
+            <ui:define name="top">
+                <h1>Upload</h1>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form id="formUploadJSF" enctype="multipart/form-data" >
+                    <p:growl id="messages" showDetail="true" />
+                    <h:inputFile value="#{fileUploadMB.fichSubido1}" label="LABEL Uploadme" lang="#{miSesionMB.lenguaje}" alt="ALT Fichero a subir"   title="TITLE Fichero a subir" />
+                    <br/>
+                    <br/>
+                    <h:commandButton action="#{fileUploadMB.subirFich}" value="Subir fichero" >  
+                    </h:commandButton>
+                </h:form>                
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
