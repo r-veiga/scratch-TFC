@@ -24,6 +24,12 @@
 
             <div id="norte" class="top">
                 <ui:insert name="top">Cabecera</ui:insert>
+                <ui:insert name="infoGeneral">
+                     <div id="zonaUser" style="align:left;">
+                         #{miSesionMB.usuario.usuario}<br/>
+                         #{miSesionMB.paciente.nombre}
+                     </div>
+                </ui:insert>
             </div>
 
             <div id="sur" class="center_content">
@@ -34,6 +40,8 @@
                 <br/>
                 <br/>
                 <h:commandLink action="/inicio" value="Vuelta a la pantalla de inicio" />
+                <br/>
+                <h:commandLink action="/login" value="Vuelta a la pantalla de login" />
             </h:form>
         </h:body>
     </f:view>

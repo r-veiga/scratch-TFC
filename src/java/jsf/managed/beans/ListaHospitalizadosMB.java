@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 import org.primefaces.event.SelectEvent;
 import org.slf4j.Logger;
@@ -33,7 +34,11 @@ public class ListaHospitalizadosMB {
 
     private String historiaClinica;
     private List<Paciente> listaHospitalizados;
+    private Map<String, Paciente> mapaHospitalizados;
     private Paciente hospitalizadoSeleccionado;
+    
+    @Inject
+    private MiSesionMB miSesionMB;
 
     /**
      * Creates a new instance of ListaHospitalizadosMB
@@ -55,6 +60,14 @@ public class ListaHospitalizadosMB {
 
     public void setListaHospitalizados(List<Paciente> listaHospitalizados) {
         this.listaHospitalizados = listaHospitalizados;
+    }
+
+    public Map<String, Paciente> getMapaHospitalizados() {
+        return mapaHospitalizados;
+    }
+
+    public void setMapaHospitalizados(Map<String, Paciente> mapaHospitalizados) {
+        this.mapaHospitalizados = mapaHospitalizados;
     }
 
     public Paciente getHospitalizadoSeleccionado() {
@@ -87,7 +100,10 @@ public class ListaHospitalizadosMB {
         listaHospitalizados.add(new Paciente("HPTL00005", "Phoebe Buffay", "Cama 105"));
         listaHospitalizados.add(new Paciente("HPTL00006", "Ross Geller", "Box 2"));
 
-        Map mapaHospitalizados = new HashMap<String, ArrayList<Paciente> >();
+        // --- FULLA --- 
+        // --- FULLA --- Creo un Map para emular el acceso a BBDD
+        // --- FULLA --- 
+        mapaHospitalizados = new HashMap<String, Paciente >();
         for (Paciente p : listaHospitalizados) {
             mapaHospitalizados.put( p.getCodPaciente(), p);
         }
@@ -99,9 +115,11 @@ public class ListaHospitalizadosMB {
 
     public String navegar() {
         String miOutcome = "apuntes";
+        
         // Para PRUEBAS voy a ir devolviendo siempre el paciente 2 (sin lógica de selección)
-        getMiSessionMap().put("sessionMapPaciente", listaHospitalizados.get(2));
-
+        // miSesionMB.setPaciente( listaHospitalizados.get(2) );
+        miSesionMB.setPaciente( mapaHospitalizados.get( historiaClinica ) );
+        
         return miOutcome;
     }
 

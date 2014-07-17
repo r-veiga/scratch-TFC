@@ -2,23 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/web/templates/templateN-S.xhtml</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/web/index.xhtml</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/jsf/managed/beans/MiSesionMB.java</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/web/login.xhtml</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/web/welcomePrimefaces.xhtml</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/jsf/resource/bundles/comunes_en.properties</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/jsf/resource/bundles/comunes.properties</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/test/jsf/managed/beans/ListaHospitalizadosMBTest.java</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/jsf/managed/beans/LoginMB.java</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/value/objects/ListaFicherosSubidos.java</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/rob/utiles/Utilidades.java</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/value/objects/FicheroSubido.java</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/web/upload/fileUpload.xhtml</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/jsf/managed/beans/FileUploadMB.java</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/web/paciente/paciente.xhtml</file>
-            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/web/inicio.xhtml</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
