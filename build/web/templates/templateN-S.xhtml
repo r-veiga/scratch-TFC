@@ -25,10 +25,13 @@
             <div id="norte" class="top">
                 <ui:insert name="top">Cabecera</ui:insert>
                 <ui:insert name="infoGeneral">
-                     <div id="zonaUser" style="align:left;">
-                         #{miSesionMB.usuario.usuario}<br/>
-                         #{miSesionMB.paciente.nombre}
-                     </div>
+                    <div id="zonaUser">
+                        <h:form>
+                            <img src="http://icons.iconarchive.com/icons/hopstarter/plastic-mini/32/Button-Turn-Off-icon.png" height="42" width="42" />
+                            <p>#{miSesionMB.usuario.usuario}</p>
+                            <h:commandButton action="#{miSesionMB.logoff}" value="Logoff" />
+                        </h:form>
+                    </div>
                 </ui:insert>
             </div>
 
@@ -42,6 +45,8 @@
                 <h:commandLink action="/inicio" value="Vuelta a la pantalla de inicio" />
                 <br/>
                 <h:commandLink action="/login" value="Vuelta a la pantalla de login" />
+                <br/>
+                <h:commandLink action="/index" value="Atajos directos a las pantallas" />
             </h:form>
         </h:body>
     </f:view>

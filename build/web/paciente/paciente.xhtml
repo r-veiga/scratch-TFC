@@ -19,7 +19,9 @@
 
             <ui:define name="top">
                 <h1><h:outputText value="#{bundlePac.encabezado1}" /></h1>
-                <div id="zonaUser" style="align:left;">#{miSesionMB.usuario.usuario}</div>
+            </ui:define>
+
+            <ui:define name="content">
                 <div>
                     <h:form>
                         <br/><h:commandLink action="/ambulantes/citas" value="Citas de ambulantes" />
@@ -50,10 +52,7 @@
                 <div id="listaApuntes">
                     <h3>Últimos apuntes</h3>
                 </div>
-            </ui:define>
 
-            <ui:define name="content">
-                content
             </ui:define>
 
         </ui:composition>

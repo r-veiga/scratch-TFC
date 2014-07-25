@@ -10,7 +10,14 @@
             <to-view-id>/ambulantes/citas.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
-
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
     <application>
         <locale-config>
             <default-locale>en</default-locale>
@@ -33,6 +40,14 @@
         <resource-bundle>
             <base-name>jsf.resource.bundles.paciente</base-name>
             <var>bundlePac</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>jsf.resource.bundles.profesional</base-name>
+            <var>bundleProf</var>
+        </resource-bundle>        
+        <resource-bundle>
+            <base-name>jsf.resource.bundles.administracion</base-name>
+            <var>bundleAdmin</var>
         </resource-bundle>
     </application>  
 

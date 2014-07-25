@@ -1,133 +1,124 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : 12-jun-2014, 2:04:47
     Author     : Roberto
 */
 
 BODY, P, LI, UL, OL {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 97%;
-	color:#000000;
-	list-style-position: outside;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 97%;
+    color:#000000;
+    list-style-position: outside;
 }
 
 A:link {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color:#663300;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color:#663300;
 
 }
 
 A:active {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color:#ff6600;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color:#ff6600;
 
 }
 
 A:visited {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color:#996633;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color:#996633;
 
 }
 
 A.navigation:link
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:65%;
-	color:#996633;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:65%;
+    color:#996633;
 }
 
 A.navigation:active
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:65%;
-	color:#996633;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:65%;
+    color:#996633;
 }
 
 A.navigation:visited
 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:65%;
-	color:#996633;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:65%;
+    color:#996633;
 }
 
 p.listpara
 {text-indent: 15%}
 
 H1 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:170%;
-	color:#336699;
-	border : solid #CCCC99;
-	width : 100%;
-	border-width : 0px 0px 2px 0px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:170%;
+    color:#336699;
+    width : 100%;
 }
 
 H2 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:130%;
-	color:#336699;
-	border : solid #cccc99;
-	border-width : 0px 0px 2px 0px;
-	width : 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:130%;
+    color:#336699;
+    width : 100%;
 }
 
 H3 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:110%;
-	color:#336699;
-	width : 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:110%;
+    color:#336699;
+    width : 100%;
 }
 
 H4 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:92%;
-	color:#000000;
-      font-weight: bold;
-	width : 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:92%;
+    color:#000000;
+    font-weight: bold;
+    width : 100%;
 }
 
 .code_no_color {
-        color : #000000;
-	font-family : "Courier New", "Courier", "monospace";
+    color : #000000;
+    font-family : "Courier New", "Courier", "monospace";
 }
 
 code {
-	color : #336699;
-	font-family : "Courier New", "Courier", "monospace";
+    color : #336699;
+    font-family : "Courier New", "Courier", "monospace";
 }
 
 P.indent {
-	text-indent: 9%;
+    text-indent: 9%;
 }
 
 table.borders {
-	border : 1pt solid #BDB76B;
+    border : 1pt solid #BDB76B;
 }
 
 TR {
-	text-align : left;
-	vertical-align : top;
+    text-align : left;
+    vertical-align : top;
 }
 
 TH {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 11pt;
-	color:#000000;
-	font-weight: bold;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    color:#000000;
+    font-weight: bold;
 }
 
 TD {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 11pt;
-	color:#000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    color:#000000;
 }
 
 .smalltext {
-	font-size:80%;
+    font-size:80%;
 }
 
 p.note {
@@ -167,23 +158,23 @@ pre {
 }
 
 .list-row {
-  background-color: #FFFFEF;
+    background-color: #FFFFEF;
 }
 
 .list-row-today {
-  background-color: #FFCCCC;
+    background-color: #FFCCCC;
 }
 
 .list-row-even {
-  background-color: #EEEEEE;
+    background-color: #EEEEEE;
 }
 
 .list-row-odd {
-  background-color: #CCCCCC;
+    background-color: #CCCCCC;
 }
 
 .form-bkg {
-  background-color: #DDDDDD;
+    background-color: #DDDDDD;
 }
 
 
@@ -201,3 +192,34 @@ pre {
 #loginGrid td{
     padding-top: 15px;
 }
+
+.top {
+    position: relative;
+    padding: 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+#zonaUser {
+    width: 100%;
+    height: 3em;
+    border: solid #CCCC99;
+    border-width: 2px 0px 2px 0px;
+    float: left;
+}
+#zonaUser p {
+    float: right;
+    padding-right: 3em;
+}
+#zonaUser img {
+    float: right;
+    height: 3em;
+    width: 3em;
+}
+
+.botonLogoff {
+    background: white url('http://icons.iconarchive.com/icons/hopstarter/plastic-mini/32/Button-Turn-Off-icon.png') no-repeat top;
+    background-size: 200px 150px;
+    width:200px;
+    height:150px;
+}
+

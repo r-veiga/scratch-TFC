@@ -5,6 +5,8 @@
     color: white;
     padding: 5px;
     margin: 0px 0px 10px 0px;
+    border : solid #CCCC99;
+    border-width: 0px 0px 2px 0px;
 }
 
 #bottom {
@@ -30,18 +32,15 @@
 
 .center_content {
     position: relative;
-    background-color: #dddddd;
     padding: 5px;
 }
 
 .left_content {
-    background-color: #dddddd;
     padding: 5px;
     margin-left: 170px;
 }
 
 .right_content {
-    background-color: #dddddd;
     padding: 5px;
     margin: 0px 170px 0px 170px;
 }
@@ -57,5 +56,6 @@
   font-weight : bold;
   text-decoration : underline;
 }
+
 
 

@@ -77,5 +77,13 @@ public class MiSesionMB implements Serializable {
     public void setUltimosUploads(ListaFicherosSubidos ultimosUploads) {
         this.ultimosUploads = ultimosUploads;
     }
+    
+    public String logoff(){
+        this.setPaciente(null);
+        this.setUsuario(null);
+        this.setUserLoggedIn(false);
+        this.setUltimosUploads(null);
+        return "login";
+    }
         
 }
