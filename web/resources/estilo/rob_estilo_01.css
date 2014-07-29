@@ -194,9 +194,9 @@ pre {
 }
 
 .top {
-    position: relative;
     padding: 0px;
     margin: 0px 0px 10px 0px;
+    overflow: hidden;
 }
 
 #zonaUser {

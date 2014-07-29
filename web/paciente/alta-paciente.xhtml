@@ -1,0 +1,51 @@
+<ui:composition template="/templates/templateN-S.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html" >
+
+    <ui:define name="metadata">
+        metadata
+    </ui:define>
+
+    <ui:define name="head">
+        <title><h:outputText value="#{bundlePac.encabezadoAlta}" /></title>
+    </ui:define>
+
+    <ui:define name="top">
+        <h1>#{bundlePac.encabezadoAlta}</h1>
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form>
+            <h:panelGrid columns="3">
+                #{bundlePac.altaHistorial}
+                <h:outputText id="idHistorial" value="#{bundlePac.validaObligatorio}" />
+                <h:outputText value=" " />
+                
+                #{bundlePac.altaNombre}
+                <h:inputText id="idNombre" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:message for="idNombre"></h:message>
+                
+                #{bundlePac.altaLocalizacion}
+                <h:inputText id="idLocalizacion" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:message for="idLocalizacion"></h:message>
+                
+                #{bundlePac.altaDNI}
+                <h:inputText id="idDNI" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:message for="idDNI"></h:message>
+                
+                #{bundlePac.altaTelefono}
+                <h:inputText id="idTelefono" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:message for="idTelefono"></h:message>
+                
+                #{bundlePac.altaDireccion}
+                <h:inputText id="idDireccion"  style="width: 400px" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:message for="idDireccion"></h:message>
+                
+                <h:commandButton  action="null" value="#{bundlePac.altaSubmitir}" />
+            </h:panelGrid> 
+        </h:form>
+    </ui:define>
+
+</ui:composition>
+

@@ -113,11 +113,14 @@ public class ListaHospitalizadosMB {
         setHistoriaClinica(((Paciente) pEventoSeleccion.getObject()).getCodPaciente());
     }
 
+    /**
+     * 
+     * @return 
+     */
     public String navegar() {
         String miOutcome = "apuntes";
         
-        // Para PRUEBAS voy a ir devolviendo siempre el paciente 2 (sin lógica de selección)
-        // miSesionMB.setPaciente( listaHospitalizados.get(2) );
+        // Guarda en un Managed Bean de ámbito sesión el paciente escogido
         miSesionMB.setPaciente( mapaHospitalizados.get( historiaClinica ) );
         
         return miOutcome;
