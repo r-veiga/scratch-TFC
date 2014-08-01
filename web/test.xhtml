@@ -1,27 +1,53 @@
 <ui:composition template="./templates/templateN-S.xhtml" 
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-                xmlns:h="http://xmlns.jcp.org/jsf/html">
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="metadata">
         metadata
     </ui:define>
 
-    <ui:define name="head">
-        head
-    </ui:define>
-
     <ui:define name="top">
-        top
+        <h1>Ésta es la página de test</h1>
     </ui:define>
 
     <ui:define name="content">
-                    <div id="zonaUser2">
-                        <h:form>
-                            <p>#{miSesionMB.usuario.usuario}</p>
-                            <h:commandButton action="#{miSesionMB.logoff}" value="Logoff" />
-                        </h:form>
-                    </div>    </ui:define>
+        <h:form id="formulario">
+            <div>
+                <p style="color:#bbbbbb">
+                En este test comprobaré los regs. contenidos 
+                en el mapa dummyDatabaseMB y que se recuperará con
+                dummyDatabaseMB.recuperarPacientes
+                que devuelve una List &lt;DummyEntidadPaciente&gt;
+                </p>
+                <h:dataTable value="#{miDummyDatabaseMB.tabPacientes.recuperarPacientes}" var="o" >
+
+                    <h:column>
+                        <!-- column header -->
+                        <f:facet name="header">Hª clínica</f:facet>
+                            #{o.dummyHistorial}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Nombre</f:facet>
+                            #{o.dummyNombre}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Localización</f:facet>
+                            #{o.dummyLocalizacion}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Teléfono</f:facet>
+                            #{o.dummyTelefono}
+                    </h:column>
+
+                </h:dataTable>
+            </div>
+        </h:form>
+    </ui:define>
 
     <h:messages />
 </ui:composition>

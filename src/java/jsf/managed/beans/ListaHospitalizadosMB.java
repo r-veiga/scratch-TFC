@@ -79,18 +79,10 @@ public class ListaHospitalizadosMB {
     }
 
     public void cargarTabla() {
-//        historiaClinica = ((Paciente) getMiSessionMap().get("sessionMapPaciente")).nombre;
-
-//        logger.error("--------------Carga la lista de hospitalizados.---------------------");
-        System.err.println("------------- Comprobación de consola ERR ---------------------");
-        System.out.println("------------- Comprobación de consola OUT ---------------------");
-
 //        Logback 
-        _log.trace("Hello World!");
-        _log.debug("How are you today?");
-        _log.info("I am fine.");
-        _log.warn("I love programming.");
-        _log.error("I am programming.");
+        _log.trace("Carga de la lista de pacientes hospitalizados desde la BBDD");
+
+        
 
         listaHospitalizados = new ArrayList<>();
         listaHospitalizados.add(new Paciente("HPTL00001", "Rachel Green", "Cama 101"));

@@ -6,7 +6,9 @@
 
 package rob.desarrollo.auxiliares;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import rob.desarrollo.entidades.DummyEntidadPaciente;
 
@@ -40,9 +42,16 @@ public class DummyTablaPacientes {
     }
     
     public void insertaPaciente (DummyEntidadPaciente pPaciente){
-        // OJO, debe modificarse la generación de la clave
+        // OJO, la clave incrementa +1 y se le asigna formato como String "0000x"
         numPacientes++;
-        dummyPacientes.put( "HPTL000" + String.valueOf(numPacientes), pPaciente);
+        String clave = "HPTL" + String.format( "%05d", numPacientes  );
+        pPaciente.setDummyHistorial(clave);
+        dummyPacientes.put( clave, pPaciente);
     }
     
+    public List<DummyEntidadPaciente> getRecuperarPacientes() {
+        List<DummyEntidadPaciente> misPacientes;
+        misPacientes = new ArrayList<>( dummyPacientes.values() );
+        return misPacientes;
+    }
 }

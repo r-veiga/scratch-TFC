@@ -23,26 +23,26 @@
                 <h:outputText value=" " />
                 
                 #{bundlePac.altaNombre}
-                <h:inputText id="idNombre" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:inputText id="idNombre" value="#{altaPacienteMB.nombre}" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
                 <h:message for="idNombre"></h:message>
                 
                 #{bundlePac.altaLocalizacion}
-                <h:inputText id="idLocalizacion" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:inputText id="idLocalizacion" value="#{altaPacienteMB.localizacion}" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
                 <h:message for="idLocalizacion"></h:message>
                 
                 #{bundlePac.altaDNI}
-                <h:inputText id="idDNI" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:inputText id="idDNI" value="#{altaPacienteMB.DNI}" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
                 <h:message for="idDNI"></h:message>
                 
                 #{bundlePac.altaTelefono}
-                <h:inputText id="idTelefono" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:inputText id="idTelefono" value="#{altaPacienteMB.telefono}" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
                 <h:message for="idTelefono"></h:message>
                 
                 #{bundlePac.altaDireccion}
-                <h:inputText id="idDireccion"  style="width: 400px" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:inputText id="idDireccion" value="#{altaPacienteMB.direccion}" style="width: 400px" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
                 <h:message for="idDireccion"></h:message>
                 
-                <h:commandButton  action="null" value="#{bundlePac.altaSubmitir}" />
+                <h:commandButton  action="#{altaPacienteMB.crearPaciente}" value="#{bundlePac.altaSubmitir}" />
             </h:panelGrid> 
         </h:form>
     </ui:define>
