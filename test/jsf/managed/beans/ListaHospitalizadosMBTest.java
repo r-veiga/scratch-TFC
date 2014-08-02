@@ -14,7 +14,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.primefaces.event.SelectEvent;
-import value.objects.Paciente;
+import rob.desarrollo.entidades.DummyEntidadPaciente;
 
 /**
  *
@@ -69,67 +69,82 @@ public class ListaHospitalizadosMBTest {
     }
 
     /**
-     * Test of getListaHospitalizados method, of class ListaHospitalizadosMB.
+     * Test of getMisPacientes method, of class ListaHospitalizadosMB.
      */
     @Test
-    public void testGetListaHospitalizados() {
-        System.out.println("getListaHospitalizados");
+    public void testGetMisPacientes() {
+        System.out.println("getMisPacientes");
         ListaHospitalizadosMB instance = new ListaHospitalizadosMB();
-        List<Paciente> expResult = null;
-        List<Paciente> result = instance.getListaHospitalizados();
+        List<DummyEntidadPaciente> expResult = null;
+        List<DummyEntidadPaciente> result = instance.getMisPacientes();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setListaHospitalizados method, of class ListaHospitalizadosMB.
+     * Test of setMisPacientes method, of class ListaHospitalizadosMB.
      */
     @Test
-    public void testSetListaHospitalizados() {
-        System.out.println("setListaHospitalizados");
-        List<Paciente> listaHospitalizados = null;
+    public void testSetMisPacientes() {
+        System.out.println("setMisPacientes");
+        List<DummyEntidadPaciente> misPacientes = null;
         ListaHospitalizadosMB instance = new ListaHospitalizadosMB();
-        instance.setListaHospitalizados(listaHospitalizados);
+        instance.setMisPacientes(misPacientes);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getHospitalizadoSeleccionado method, of class ListaHospitalizadosMB.
+     * Test of getMisPacientesFiltrados method, of class ListaHospitalizadosMB.
      */
     @Test
-    public void testGetHospitalizadoSeleccionado() {
-        System.out.println("getHospitalizadoSeleccionado");
+    public void testGetMisPacientesFiltrados() {
+        System.out.println("getMisPacientesFiltrados");
         ListaHospitalizadosMB instance = new ListaHospitalizadosMB();
-        Paciente expResult = null;
-        Paciente result = instance.getHospitalizadoSeleccionado();
+        List<DummyEntidadPaciente> expResult = null;
+        List<DummyEntidadPaciente> result = instance.getMisPacientesFiltrados();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setHospitalizadoSeleccionado method, of class ListaHospitalizadosMB.
+     * Test of setMisPacientesFiltrados method, of class ListaHospitalizadosMB.
      */
     @Test
-    public void testSetHospitalizadoSeleccionado() {
-        System.out.println("setHospitalizadoSeleccionado");
-        Paciente hospitalizadoSeleccionado = null;
+    public void testSetMisPacientesFiltrados() {
+        System.out.println("setMisPacientesFiltrados");
+        List<DummyEntidadPaciente> misPacientesFiltrados = null;
         ListaHospitalizadosMB instance = new ListaHospitalizadosMB();
-        instance.setHospitalizadoSeleccionado(hospitalizadoSeleccionado);
+        instance.setMisPacientesFiltrados(misPacientesFiltrados);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of cargarTabla method, of class ListaHospitalizadosMB.
+     * Test of getPacienteSeleccionado method, of class ListaHospitalizadosMB.
      */
     @Test
-    public void testCargarTabla() {
-        System.out.println("cargarTabla");
+    public void testGetPacienteSeleccionado() {
+        System.out.println("getPacienteSeleccionado");
         ListaHospitalizadosMB instance = new ListaHospitalizadosMB();
-        instance.cargarTabla();
+        DummyEntidadPaciente expResult = null;
+        DummyEntidadPaciente result = instance.getPacienteSeleccionado();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setPacienteSeleccionado method, of class ListaHospitalizadosMB.
+     */
+    @Test
+    public void testSetPacienteSeleccionado() {
+        System.out.println("setPacienteSeleccionado");
+        DummyEntidadPaciente pacienteSeleccionado = null;
+        ListaHospitalizadosMB instance = new ListaHospitalizadosMB();
+        instance.setPacienteSeleccionado(pacienteSeleccionado);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

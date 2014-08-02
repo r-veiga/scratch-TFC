@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import rob.desarrollo.entidades.DummyEntidadPaciente;
+import value.objects.Paciente;
 
 /**
  * Clase que sólo existirá durante la fase de desarrollo. 
@@ -53,5 +54,11 @@ public class DummyTablaPacientes {
         List<DummyEntidadPaciente> misPacientes;
         misPacientes = new ArrayList<>( dummyPacientes.values() );
         return misPacientes;
+    }
+
+    public DummyEntidadPaciente getRecuperaPacientePorHistoria(String pHistoriaClinica) {
+        DummyEntidadPaciente miPaciente = null;
+        miPaciente = dummyPacientes.get( pHistoriaClinica );
+        return miPaciente;
     }
 }

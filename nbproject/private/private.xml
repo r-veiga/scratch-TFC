@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/rob/desarrollo/auxiliares/DummyTablaPacientes.java</file>
+            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/web/test.xhtml</file>
+            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/rob/desarrollo/entidades/DummyEntidadPaciente.java</file>
+            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/jsf/managed/beans/TestMB.java</file>
+            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/jsf/managed/beans/ListaHospitalizadosMB.java</file>
+            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/src/java/jsf/managed/beans/MiSesionMB.java</file>
+            <file>file:/C:/Users/Roberto/Documents/NetBeansProjects/nb01_grid_select/web/hospitalizacion/lista-hospitalizados.xhtml</file>
+        </group>
     </open-files>
 </project-private>

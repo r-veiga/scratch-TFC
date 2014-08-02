@@ -9,8 +9,8 @@
 
         <ui:composition template="./../templates/templateN-S.xhtml">
 
-            <ui:define name="metadata">
-                metadata
+            <ui:define name="preRenderizadoVista">
+                preRenderizadoVista
             </ui:define>
 
             <ui:define name="head">
@@ -25,7 +25,6 @@
                 <div>
                     <h:form>
                         <br/><h:commandLink action="/ambulantes/citas" value="Citas de ambulantes" />
-                        <br/><h:commandLink action="citas" value="Citas de ambulantes (navigation rules)" />
                         <br/><h:commandLink action="/upload/fileUpload" value="Upload de ficheros" />
                         <br/><h:commandLink action="/hospitalizacion/lista-hospitalizados" value="Hospitalización" />
                     </h:form>

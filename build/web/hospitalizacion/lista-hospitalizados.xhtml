@@ -8,8 +8,10 @@
                 xmlns:p="http://primefaces.org/ui">
 
 
-    <ui:define name="metadata" >
-        <f:event type="preRenderView" listener="#{listaHospitalizadosMB.cargarTabla}" />    
+    <ui:define name="preRenderizadoVista" >
+        <ui:remove>
+            <f:event type="preRenderView" listener="#{listaHospitalizadosMB.cargarTabla}" />   
+        </ui:remove>
     </ui:define>
 
     <ui:define name="head">
@@ -22,30 +24,45 @@
 
     <ui:define name="content">
         <h:form id="formulario">
+            
             <h:outputText value="#{bundleHosp.historiaclinica}" />
             <h:inputText id="hclinica" value="#{listaHospitalizadosMB.historiaClinica}"/>
+            
             <h:commandButton value="Consultar hª clínica" action="#{listaHospitalizadosMB.navegar}" />
+            
             <div>
-                <p:dataTable id="singleDataTable" var="paciente" value="#{listaHospitalizadosMB.listaHospitalizados}" 
-                             selectionMode="single" selection="#{listaHospitalizadosMB.hospitalizadoSeleccionado}" rowKey="#{paciente.codPaciente}">
-                    <f:facet name="header">
-                        Single with Row Click
-                    </f:facet>
+                <p:dataTable id="singleDataTable" 
+                             var="pac" value="#{listaHospitalizadosMB.misPacientes}" 
+                             filteredValue="#{listaHospitalizadosMB.misPacientesFiltrados}" widgetVar="pacTable" emptyMessage="No existen pacientes para esta selección"
+                             selectionMode="single" selection="#{listaHospitalizadosMB.pacienteSeleccionado}" rowKey="#{pac.dummyHistorial}">
+
                     <p:ajax event="rowSelect" listener="#{listaHospitalizadosMB.onRowSelect}" update=":formulario:hclinica" />
-                    <p:column headerText="Hª clínica">
-                        <h:outputText value="#{paciente.codPaciente}" />
+
+                    <p:column headerText="Hª clínica" footerText="Contiene"
+                              filterBy="#{pac.dummyHistorial}"
+                              filterMatchMode="contains" >
+                        <h:outputText value="#{pac.dummyHistorial}" />
                     </p:column>
-                    <p:column headerText="Paciente">
-                        <h:outputText value="#{paciente.nombre}" />
+                    
+                    <p:column headerText="Paciente" footerText="Contiene"
+                              filterBy="#{pac.dummyNombre}"
+                              filterMatchMode="contains" >
+                        <h:outputText value="#{pac.dummyNombre}" />
                     </p:column>
-                    <p:column headerText="Localización">
-                        <h:outputText value="#{paciente.localizacion}" />
+                    
+                    <p:column headerText="Localización" footerText="Contiene"
+                              filterBy="#{pac.dummyLocalizacion}"
+                              filterMatchMode="contains" >
+                        <h:outputText value="#{pac.dummyLocalizacion}" />
                     </p:column>
+                    
                     <f:facet name="footer">
                         Esto es el pie de la tabla.
                     </f:facet>
+                    
                 </p:dataTable>
             </div>
+            
         </h:form>
 
     </ui:define>

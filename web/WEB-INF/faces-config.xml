@@ -6,13 +6,6 @@
 
     <navigation-rule>
         <navigation-case>
-            <from-outcome>citas</from-outcome>
-            <to-view-id>/ambulantes/citas.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    
-    <navigation-rule>
-        <navigation-case>
             <from-outcome>login</from-outcome>
             <to-view-id>login.xhtml</to-view-id>
         </navigation-case>

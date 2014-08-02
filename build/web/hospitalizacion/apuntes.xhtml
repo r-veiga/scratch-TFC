@@ -10,7 +10,7 @@
 
         <ui:composition template="/templates/templateN-S.xhtml">
 
-            <ui:define name="metadata">
+            <ui:define name="preRenderizadoVista">
                 <f:event type="preRenderView" listener="#{apuntesMB.cargarTabla}" />
             </ui:define>
 
@@ -22,7 +22,7 @@
                 <table>
                     <tr>
                         <td>Foto</td>
-                        <td><h1>#{miSesionMB.paciente.nombre}</h1></td>
+                        <td><h1>#{miSesionMB.dummyEntidadPaciente.dummyNombre}</h1></td>
                     </tr>
                 </table>
             </ui:define>

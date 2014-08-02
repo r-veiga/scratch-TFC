@@ -11,6 +11,7 @@ import javax.annotation.PostConstruct;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import org.primefaces.event.SelectEvent;
 import rob.desarrollo.auxiliares.DummyTablaPacientes;
 import rob.desarrollo.auxiliares.MiDummyDatabaseMB;
 import rob.desarrollo.entidades.DummyEntidadPaciente;
@@ -25,6 +26,8 @@ public class TestMB {
 
     private List<DummyEntidadPaciente> misPacientes;
     private List<DummyEntidadPaciente> misPacientesFiltrados;
+    private DummyEntidadPaciente pacienteSeleccionado;
+    private String historiaClinica;
     
     @Inject
     private MiDummyDatabaseMB miDummyDatabaseMB;
@@ -55,7 +58,25 @@ public class TestMB {
     public void setMisPacientesFiltrados(List<DummyEntidadPaciente> misPacientesFiltrados) {
         this.misPacientesFiltrados = misPacientesFiltrados;
     }
+
+    public DummyEntidadPaciente getPacienteSeleccionado() {
+        return pacienteSeleccionado;
+    }
+
+    public void setPacienteSeleccionado(DummyEntidadPaciente pacienteSeleccionado) {
+        this.pacienteSeleccionado = pacienteSeleccionado;
+    }
+
+    public String getHistoriaClinica() {
+        return historiaClinica;
+    }
+
+    public void setHistoriaClinica(String historiaClinica) {
+        this.historiaClinica = historiaClinica;
+    }
     
-    
+    public void onRowSelect(SelectEvent pEventoSeleccion) {
+        setHistoriaClinica(((DummyEntidadPaciente) pEventoSeleccion.getObject()).getDummyHistorial());
+    }    
     
 }

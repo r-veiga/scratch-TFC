@@ -10,6 +10,7 @@ import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
+import rob.desarrollo.entidades.DummyEntidadPaciente;
 import value.objects.ListaFicherosSubidos;
 import value.objects.Paciente;
 import value.objects.User;
@@ -26,6 +27,7 @@ public class MiSesionMB implements Serializable {
     private boolean userLoggedIn;
     private User usuario;
     private Paciente paciente;
+    private DummyEntidadPaciente dummyEntidadPaciente;
     private ListaFicherosSubidos ultimosUploads;
     
     /**
@@ -70,6 +72,14 @@ public class MiSesionMB implements Serializable {
         this.paciente = paciente;
     }
 
+    public DummyEntidadPaciente getDummyEntidadPaciente() {
+        return dummyEntidadPaciente;
+    }
+
+    public void setDummyEntidadPaciente(DummyEntidadPaciente dummyEntidadPaciente) {
+        this.dummyEntidadPaciente = dummyEntidadPaciente;
+    }
+
     public ListaFicherosSubidos getUltimosUploads() {
         return ultimosUploads;
     }
@@ -80,6 +90,7 @@ public class MiSesionMB implements Serializable {
     
     public String logoff(){
         this.setPaciente(null);
+        this.setDummyEntidadPaciente(null);
         this.setUsuario(null);
         this.setUserLoggedIn(false);
         this.setUltimosUploads(null);
