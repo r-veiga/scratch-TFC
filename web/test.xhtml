@@ -17,64 +17,11 @@
         <h:form id="formulario">
             <div>
                 <p style="color:#bbbbbb">
-                    En este test comprobaré los regs. contenidos 
-                    en el mapa dummyDatabaseMB y que se recuperará con
-                    dummyDatabaseMB.recuperarPacientes
-                    que devuelve una List &lt;DummyEntidadPaciente&gt;
+                    Test para escribir apuntes de hospitalizados.<br/>
+                    El "objeto de trabajo + DAO" que almacene los datos será dummyEntidadApunte<br/>
+                    que se obtendrán de dummyDatabaseMB.dummyTablaApuntes
                 </p>
-                <h:dataTable value="#{miDummyDatabaseMB.tabPacientes.recuperarPacientes}" var="o" >
-
-                    <h:column>
-                        <!-- column header -->
-                        <f:facet name="header">Hª clínica</f:facet>
-                            #{o.dummyHistorial}
-                    </h:column>
-
-                    <h:column>
-                        <f:facet name="header">Nombre</f:facet>
-                            #{o.dummyNombre}
-                    </h:column>
-
-                    <h:column>
-                        <f:facet name="header">Localización</f:facet>
-                            #{o.dummyLocalizacion}
-                    </h:column>
-
-                    <h:column>
-                        <f:facet name="header">Teléfono</f:facet>
-                            #{o.dummyTelefono}
-                    </h:column>
-
-                </h:dataTable>
             </div>
-        </h:form>
-
-        <br/>
-
-        <h:form id="form2">
-            <h:outputText value="#{bundleHosp.historiaclinica}" />
-            <h:inputText id="hclinica" value="#{testMB.historiaClinica}"/>
-
-            <p:dataTable var="pac" value="#{testMB.misPacientes}" filteredValue="#{testMB.misPacientesFiltrados}"
-                         selectionMode="single" selection="#{testMB.pacienteSeleccionado}" rowKey="#{pac.dummyHistorial}"
-                         widgetVar="pacTable"
-                         emptyMessage="No existen pacientes para esta selección" >
-
-                <p:ajax event="rowSelect" listener="#{testMB.onRowSelect}" update=":form2:hclinica" />
-
-                <p:column filterBy="#{pac.dummyHistorial}" 
-                          headerText="Historial" footerText="contiene" 
-                          filterMatchMode="contains" >
-                    <h:outputText value="#{pac.dummyHistorial}" />
-                </p:column>
-
-                <p:column filterBy="#{pac.dummyNombre}" 
-                          headerText="Nombre" footerText="contiene" 
-                          filterMatchMode="contains" >
-                    <h:outputText value="#{pac.dummyNombre}" />
-                </p:column>
-
-            </p:dataTable>
         </h:form>
 
     </ui:define>
