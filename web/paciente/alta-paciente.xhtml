@@ -1,7 +1,8 @@
 <ui:composition template="/templates/templateN-S.xhtml" 
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-                xmlns:h="http://xmlns.jcp.org/jsf/html" >
+                xmlns:h="http://xmlns.jcp.org/jsf/html" 
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="preRenderizadoVista">
         preRenderizadoVista
@@ -21,27 +22,29 @@
                 #{bundlePac.altaHistorial}
                 <h:outputText id="idHistorial" value="#{bundlePac.validaObligatorio}" />
                 <h:outputText value=" " />
-                
+
                 #{bundlePac.altaNombre}
                 <h:inputText id="idNombre" value="#{altaPacienteMB.nombre}" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
                 <h:message for="idNombre"></h:message>
-                
+
                 #{bundlePac.altaLocalizacion}
-                <h:inputText id="idLocalizacion" value="#{altaPacienteMB.localizacion}" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
+                <h:selectOneMenu id="idLocalizacionx" value="#{altaPacienteMB.localizacion}" required="true" requiredMessage="#{bundlePac.validaObligatorio}" >
+                    <f:selectItems value="#{miDummyDatabaseMB.tabLocalizaciones.localizacionesLibres}" />
+                </h:selectOneMenu>
                 <h:message for="idLocalizacion"></h:message>
-                
+
                 #{bundlePac.altaDNI}
                 <h:inputText id="idDNI" value="#{altaPacienteMB.DNI}" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
                 <h:message for="idDNI"></h:message>
-                
+
                 #{bundlePac.altaTelefono}
                 <h:inputText id="idTelefono" value="#{altaPacienteMB.telefono}" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
                 <h:message for="idTelefono"></h:message>
-                
+
                 #{bundlePac.altaDireccion}
                 <h:inputText id="idDireccion" value="#{altaPacienteMB.direccion}" style="width: 400px" required="true" requiredMessage="#{bundlePac.validaObligatorio}"/>
                 <h:message for="idDireccion"></h:message>
-                
+
                 <h:commandButton  action="#{altaPacienteMB.crearPaciente}" value="#{bundlePac.altaSubmitir}" />
             </h:panelGrid> 
         </h:form>
