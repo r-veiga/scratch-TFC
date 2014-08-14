@@ -88,6 +88,7 @@ public class AltaPacienteMB implements Serializable {
         _log.info( "baseDeDatos.toString() ==> " + baseDeDatos.toString() );
         _log.info( "baseDeDatos.getTabPacientes().toString() ==> " + baseDeDatos.getTabPacientes().toString() );
         baseDeDatos.getTabPacientes().insertaPaciente(auxPaciente);
+        baseDeDatos.getTabLocalizaciones().getDummyLocalizaciones().get(localizacion).setOcupado( true );
         return null;
     }
 

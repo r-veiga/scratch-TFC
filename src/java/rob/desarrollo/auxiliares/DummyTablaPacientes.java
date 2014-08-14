@@ -28,7 +28,7 @@ public class DummyTablaPacientes {
         dummyPacientes.put( "HPTL00001", new DummyEntidadPaciente("HPTL00001", "Rachel Green"  , "Cama 101", "12123123Ra", "tlfRa", "addrRa") );
         dummyPacientes.put( "HPTL00002", new DummyEntidadPaciente("HPTL00002", "Chandler Bing" , "Cama 102", "12123123Ch", "tlfCh", "addrCh") );
         dummyPacientes.put( "HPTL00003", new DummyEntidadPaciente("HPTL00003", "Monica Geller" , "Cama 103", "12123123Mo", "tlfMo", "addrMo") );
-        dummyPacientes.put( "HPTL00004", new DummyEntidadPaciente("HPTL00004", "Joey Tribbiani", "Cama 216", "12123123Jo", "tlfJo", "addrJo") );
+        dummyPacientes.put( "HPTL00004", new DummyEntidadPaciente("HPTL00004", "Joey Tribbiani", "Cama 206", "12123123Jo", "tlfJo", "addrJo") );
         dummyPacientes.put( "HPTL00005", new DummyEntidadPaciente("HPTL00005", "Phoebe Buffay" , "Cama 105", "12123123Ph", "tlfPh", "addrPh") );
         dummyPacientes.put( "HPTL00006", new DummyEntidadPaciente("HPTL00006", "Ross Geller"   , "Box 2"   , "12123123Ro", "tlfRo", "addrRo") );   
         numPacientes = dummyPacientes.size();

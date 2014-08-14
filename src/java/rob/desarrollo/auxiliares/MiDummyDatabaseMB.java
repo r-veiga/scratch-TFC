@@ -20,6 +20,7 @@ import javax.annotation.PostConstruct;
 public class MiDummyDatabaseMB implements Serializable {
 
     private DummyTablaPacientes tabPacientes;
+    private DummyTablaLocalizaciones tabLocalizaciones;
     /**
      * Creates a new instance of MiDummyDatabaseMB
      */
@@ -29,6 +30,7 @@ public class MiDummyDatabaseMB implements Serializable {
     @PostConstruct
     public void creaTablas() {
         tabPacientes = new DummyTablaPacientes();
+        tabLocalizaciones = new DummyTablaLocalizaciones();
     }
 
     public DummyTablaPacientes getTabPacientes() {
@@ -38,5 +40,13 @@ public class MiDummyDatabaseMB implements Serializable {
     public void setTabPacientes(DummyTablaPacientes tabPacientes) {
         this.tabPacientes = tabPacientes;
     }  
+
+    public DummyTablaLocalizaciones getTabLocalizaciones() {
+        return tabLocalizaciones;
+    }
+
+    public void setTabLocalizaciones(DummyTablaLocalizaciones tabLocalizaciones) {
+        this.tabLocalizaciones = tabLocalizaciones;
+    }
     
 }
